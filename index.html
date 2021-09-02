@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Book</title>
+	<style>
+		#spinner{
+			display: none;
+		}
+		#error-msg{
+			display: none;
+		}
+	</style>
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+	<h1 class="text-center text-primary m-4">Book Store</h1>
+
+	<!-- book search area -->
+<div class="input-group mb-3 mx-auto w-50">
+  <input id="search-field" type="text" class="form-control" placeholder="Enter Book Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+  <button onclick="searchBook()" class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+</div>
+<!-- error and spinner div-->
+<div class="d-flex justify-content-center">
+	<h1 id="error-msg" class="text-center text-danger">Insert a valid name</h1>
+  <div id="spinner" class="spinner-border" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<!-- book list -->
+  <h4 id="book-list" class="m-4 w-75 mx-auto bg-dark text-warning text-center"></h4>
+
+<!-- book search result -->
+<div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 mx-auto w-75">
+    
+</div>
+
+	<!-- bootstrap js -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+	<!-- main js -->
+	<script src="main.js"></script>
+</body>
+</html>
