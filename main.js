@@ -3,7 +3,7 @@
 	const searchText = searchField.value
 	searchField.value = ''
 	// handle empty string
-	if(searchText == ""){
+	if(searchText === ""){
 		// error handle
 		displayError()
 	}
@@ -37,8 +37,19 @@ const displayBook = books => {
     // access search result div
     const searchResult = document.getElementById('search-result')
     searchResult.textContent = '';
-    // show books found
+    // hide spinner
+    document.getElementById('spinner').style.display = 'none';
+    // hide teams found
+    document.getElementById('book-list').innerText = ''
+   
+   if (books?.length == 0) {
+        alert("No search Result !!");
+    }
+
+    else{
+    	// show books found
     document.getElementById('book-list').innerText = `Total books ${books.length}`
+    document.getElementById('error-msg').style.display = "none"
    // display each books in card
     books.forEach(book => {
     	const div = document.createElement('div')
@@ -60,3 +71,4 @@ const displayBook = books => {
     // hide spinner
     document.getElementById('spinner').style.display = 'none';
 }
+    }
