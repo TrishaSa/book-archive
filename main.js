@@ -42,7 +42,7 @@ const displayBook = books => {
     // hide teams found
     document.getElementById('book-list').innerText = ''
    
-   if (books?.length == 0) {
+   if (books?.length === 0) {
         alert("No search Result !!");
     }
 
