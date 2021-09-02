@@ -7,7 +7,6 @@
 		// error handle
 		displayError()
 	}
-
 	else{
 		// dsiplay spinner
 	document.getElementById('spinner').style.display = 'block';
@@ -25,22 +24,21 @@
 
 	}
 }
+
 const displayError = () =>{
 	document.getElementById('error-msg').style.display = "block"
   document.getElementById('spinner').style.display = 'none';
  	document.getElementById('book-list').innerText = '';
-
+ 	document.getElementById('search-result').textContent = '';
 }
+
 const displayBook = books => {
     // console.log(books)
-
     // access search result div
     const searchResult = document.getElementById('search-result')
     searchResult.textContent = '';
-
     // show books found
     document.getElementById('book-list').innerText = `Total books ${books.length}`
-
    // display each books in card
     books.forEach(book => {
     	const div = document.createElement('div')
@@ -62,5 +60,3 @@ const displayBook = books => {
     // hide spinner
     document.getElementById('spinner').style.display = 'none';
 }
-
-// error handle
